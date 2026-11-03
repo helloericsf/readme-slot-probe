@@ -1,0 +1,6 @@
+{
+  "schema": 1,
+  "entries": [
+    { "campaign_id": "sponsor-a", "name": "Acmeplane Test Widgets", "version": "v1", "starts_at": "2026-11-03T00:00:00Z" }
+  ]
+}
