@@ -1,6 +1,9 @@
 {
   "schema": 1,
   "entries": [
-    { "campaign_id": "sponsor-a", "name": "Acmeplane Test Widgets", "version": "v1", "starts_at": "2026-11-03T00:00:00Z" }
+    { "campaign_id": "sponsor-a", "name": "Acmeplane Test Widgets", "version": "v1", "starts_at": "2026-11-03T00:00:00Z" },
+    { "campaign_id": "sponsor-b", "name": "Borealis Mock Cloud", "version": "v1", "starts_at": "2026-11-04T17:00:00Z" },
+    { "campaign_id": "sponsor-a", "name": "Acmeplane Test Widgets", "version": "v1", "starts_at": "2026-11-05T17:00:00Z" },
+    { "campaign_id": "sponsor-b", "name": "Borealis Mock Cloud", "version": "v1", "starts_at": "2026-11-06T17:00:00Z" }
   ]
 }
