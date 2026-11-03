@@ -1,0 +1,33 @@
+# Rewrites the README sponsor block from .github/sponsor-slot/calendar.json.
+# The calendar, merged into main, is the only source of sponsors. No secrets.
+name: sponsor-slot
+
+on:
+  schedule:
+    - cron: '2-59/5 * * * *'
+  push:
+    branches: [main]
+    paths:
+      - '.github/sponsor-slot/calendar.json'
+      - '.github/sponsor-slot/template.md'
+
+permissions: {}
+
+concurrency:
+  group: sponsor-slot
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Update the sponsor block
+        run: node .github/sponsor-slot/update.mjs
