@@ -3,11 +3,6 @@
 name: sponsor-slot
 
 on:
-  schedule:
-    # Every 5 min, off the top of the hour. An explicit list (not 2-59/5):
-    # changing the cron re-registers the schedule (no scheduled run started
-    # in the 2 h after the first install, L-22).
-    - cron: '2,7,12,17,22,27,32,37,42,47,52,57 * * * *'
   push:
     branches: [main]
     paths:
